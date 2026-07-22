@@ -89,11 +89,11 @@
       </div>
     </section>
 
-    <section class="section section--alt" style="text-align: center;">
-      <div class="container container--narrow">
+    <section class="section section--alt section--form">
+      <div class="container">
         <h2 class="section__title">Изпратете ни съобщение</h2>
         <div class="divider"></div>
-        <p style="margin-bottom: var(--space-xl); color: var(--color-gray-600);">Попълнете формата и ние ще се свържем с вас</p>
+        <p class="form-intro">Попълнете формата и ние ще се свържем с вас</p>
         <form action="https://formsubmit.co/adv.karagachliev@gmail.com" method="POST" class="contact-form">
           <input type="text" name="_honey" style="display:none">
           <input type="hidden" name="_captcha" value="false">
@@ -108,8 +108,8 @@
             <input type="email" id="email" name="Имейл" maxlength="254" required>
           </div>
           <div class="form-group">
-            <label for="phone">Телефон</label>
-            <input type="tel" id="phone" name="Телефон" maxlength="30">
+            <label for="phone">Телефон <span class="required">*</span></label>
+            <input type="tel" id="phone" name="Телефон" maxlength="30" required>
           </div>
           <div class="form-group">
             <label for="message">Съобщение <span class="required">*</span></label>
@@ -118,9 +118,6 @@
           <button type="submit" class="form-submit">Изпрати</button>
           <p class="form-note">Няма да изпращаме спам. Попълвате веднъж и ние ви връщаме обаждане или имейл.</p>
         </form>
-        <p style="margin-top: var(--space-xl);">
-          <a href="tel:+359878787671" style="display: inline-block; font-size: var(--font-size-xl); font-weight: 600; color: var(--color-white); background-color: var(--color-accent); padding: var(--space-md) var(--space-2xl); border-radius: var(--radius-md);">+359 878 787 671</a>
-        </p>
       </div>
     </section>
   </main>
