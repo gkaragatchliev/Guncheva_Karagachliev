@@ -1,0 +1,27 @@
+{
+  "name": "lawyer-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkaragatchliev/Guncheva_Karagachliev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gkaragatchliev/Guncheva_Karagachliev/issues"
+  },
+  "homepage": "https://github.com/gkaragatchliev/Guncheva_Karagachliev#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1"
+  }
+}

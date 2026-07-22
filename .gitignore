@@ -17,3 +17,9 @@ Desktop.ini
 # Python
 __pycache__/
 *.pyc
+
+# Node
+node_modules/
+
+# Playwright
+test-results/

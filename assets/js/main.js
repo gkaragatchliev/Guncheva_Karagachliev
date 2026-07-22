@@ -4,8 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (toggle && mobileNav) {
     toggle.addEventListener('click', function () {
+      var isOpen = mobileNav.classList.toggle('mobile-nav--open');
       toggle.classList.toggle('menu-toggle--active');
-      mobileNav.classList.toggle('mobile-nav--open');
+      document.body.classList.toggle('body--menu-open', isOpen);
     });
   }
 });
