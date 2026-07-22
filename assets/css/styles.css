@@ -133,17 +133,39 @@ ul {
   color: var(--color-accent);
 }
 
-.header__phone {
+.header__phones {
   display: none;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.header__phone {
   font-size: var(--font-size-sm);
   font-weight: 500;
   color: var(--color-accent);
   white-space: nowrap;
   transition: color 0.2s;
+  line-height: 1;
 }
 
 .header__phone:hover {
   color: var(--color-accent-dark);
+}
+
+.header__phone-label {
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+  margin-right: 2px;
+}
+
+.header__phone-sep {
+  color: var(--color-gray-300);
+  font-size: var(--font-size-sm);
+  user-select: none;
+  line-height: 1;
 }
 
 /* ===== NAVIGATION ===== */
@@ -262,16 +284,36 @@ ul {
   font-weight: 600;
 }
 
-.mobile-nav__phone {
+.mobile-nav__phones {
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.mobile-nav__phone {
   text-align: center;
-  padding: var(--space-lg);
-  font-size: var(--font-size-xl);
+  padding: var(--space-md) var(--space-lg);
+  font-size: var(--font-size-base);
   font-weight: 600;
   color: var(--color-white);
   background-color: var(--color-accent);
   border-radius: var(--radius-md);
   touch-action: manipulation;
+  transition: background-color 0.2s;
+}
+
+.mobile-nav__phone:hover {
+  background-color: var(--color-accent-dark);
+}
+
+.mobile-nav__phone-label {
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+  margin-right: 4px;
 }
 
 /* ===== HERO ===== */
@@ -325,20 +367,37 @@ ul {
   opacity: 0.92;
 }
 
+.hero__phones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
 .hero__phone {
   display: inline-block;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: 600;
   color: var(--color-white);
   background-color: var(--color-accent);
-  padding: var(--space-md) var(--space-2xl);
+  padding: var(--space-sm) var(--space-xl);
   border-radius: var(--radius-md);
   transition: background-color 0.2s, transform 0.2s;
+  min-width: 260px;
 }
 
 .hero__phone:hover {
   background-color: var(--color-accent-dark);
   transform: translateY(-1px);
+}
+
+.hero__phone-label {
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+  margin-right: 4px;
 }
 
 /* ===== SECTIONS ===== */
@@ -519,8 +578,8 @@ ul {
 
 /* ===== RESPONSIVE TABLET ===== */
 @media (min-width: 768px) {
-  .header__phone {
-    display: block;
+  .header__phones {
+    display: flex;
   }
 
   .nav {

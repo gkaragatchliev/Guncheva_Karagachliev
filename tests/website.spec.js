@@ -126,13 +126,18 @@ test.describe('Mobile menu', () => {
     }
   });
 
-  test('mobile phone button has adequate touch target', async ({ page: p }) => {
+  test('mobile phone buttons have adequate touch target', async ({ page: p }) => {
     const toggle = p.locator('#menu-toggle');
     await toggle.click();
-    const phoneBtn = p.locator('.mobile-nav__phone');
-    await expect(phoneBtn).toBeVisible();
-    const box = await phoneBtn.boundingBox();
-    expect(Math.min(box.width, box.height)).toBeGreaterThanOrEqual(44);
+    const phoneBtns = p.locator('.mobile-nav__phone');
+    const count = await phoneBtns.count();
+    expect(count).toBeGreaterThanOrEqual(1);
+    for (let i = 0; i < count; i++) {
+      const btn = phoneBtns.nth(i);
+      await expect(btn).toBeVisible();
+      const box = await btn.boundingBox();
+      expect(Math.min(box.width, box.height)).toBeGreaterThanOrEqual(44);
+    }
   });
 });
 
