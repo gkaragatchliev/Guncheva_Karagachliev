@@ -796,14 +796,14 @@ ul {
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
-  max-width: 560px;
+  max-width: 520px;
   margin: 0 auto;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  gap: 6px;
   text-align: left;
 }
 
@@ -811,17 +811,25 @@ ul {
   font-size: var(--font-size-sm);
   font-weight: 600;
   color: var(--color-gray-600);
+  letter-spacing: 0.2px;
+}
+
+.form-group label .required {
+  color: var(--color-accent);
+  margin-left: 2px;
 }
 
 .form-group input {
   width: 100%;
-  padding: var(--space-sm) var(--space-md);
+  height: 48px;
+  padding: 0 14px;
   font-size: var(--font-size-base);
   font-family: var(--font-sans);
-  border: 1px solid var(--color-gray-300);
+  color: var(--color-black);
+  border: 1.5px solid var(--color-gray-300);
   border-radius: var(--radius-md);
   background-color: var(--color-white);
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
   touch-action: manipulation;
 }
 
@@ -833,16 +841,18 @@ ul {
 
 .form-group textarea {
   width: 100%;
-  padding: var(--space-sm) var(--space-md);
+  padding: 12px 14px;
   font-size: var(--font-size-base);
   font-family: var(--font-sans);
-  border: 1px solid var(--color-gray-300);
+  color: var(--color-black);
+  border: 1.5px solid var(--color-gray-300);
   border-radius: var(--radius-md);
   background-color: var(--color-white);
   resize: vertical;
-  min-height: 120px;
-  transition: border-color 0.2s;
+  min-height: 130px;
+  transition: border-color 0.2s, box-shadow 0.2s;
   touch-action: manipulation;
+  line-height: 1.5;
 }
 
 .form-group textarea:focus {
@@ -854,7 +864,7 @@ ul {
 .form-submit {
   display: inline-block;
   width: 100%;
-  padding: var(--space-md) var(--space-xl);
+  height: 50px;
   font-size: var(--font-size-base);
   font-weight: 600;
   font-family: var(--font-sans);
@@ -863,17 +873,24 @@ ul {
   border: none;
   border-radius: var(--radius-md);
   cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
+  transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
   touch-action: manipulation;
+  letter-spacing: 0.3px;
 }
 
 .form-submit:hover {
   background-color: var(--color-accent-dark);
   transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.form-submit:active {
+  transform: translateY(0);
 }
 
 .form-note {
   text-align: center;
   font-size: var(--font-size-xs);
   color: var(--color-gray-400);
+  line-height: 1.5;
 }
