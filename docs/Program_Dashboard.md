@@ -84,7 +84,7 @@ Each test is a pass/fail check against the PRD and UX requirements. No test writ
 | 34 | Law book image present on About | eastern_rumelia_laws_1880.jpg loaded | ✅ — 1.2MB, needs compression |
 | 35 | Abstract hill forms on Services | SVG/CSS layered curves present | ✅ |
 | 36 | Generous whitespace throughout | Content has room to breathe | ✅ — needs visual review |
-| 37 | No typos or placeholder text | All content final, proofread | ❌ — content is functional draft, needs partner review |
+| 37 | No typos or placeholder text | All content final, proofread | ❌ — content is functional draft (English fixed), needs partner review |
 | 38 | Images compressed (WebP or JPEG <200KB) | Total page weight <500KB | ✅ — tova.jpg 199KB, law book 161KB, total 361KB |
 
 ### TS-07: Responsive & Mobile
